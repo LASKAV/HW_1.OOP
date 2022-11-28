@@ -1,54 +1,53 @@
 #include <iostream>
 
-// Реализуйте класс Дробь.Необходимо хранить числитель и знаменатель в качестве переменных - членов.
-// Реализуйте функции - члены для ввода данных в переменные - члены, для выполнения арифметических операций
-// (сложение, вычитание, умножение, деление, и т.д.).Арифметические операции должны выполняться с двумя дробями.
-// Пример заголовка функции - члена для сложения дробей : void Mult(drob x)
+// Р РµР°Р»РёР·СѓР№С‚Рµ РєР»Р°СЃСЃ Р”СЂРѕР±СЊ.РќРµРѕР±С…РѕРґРёРјРѕ С…СЂР°РЅРёС‚СЊ С‡РёСЃР»РёС‚РµР»СЊ Рё Р·РЅР°РјРµРЅР°С‚РµР»СЊ РІ РєР°С‡РµСЃС‚РІРµ РїРµСЂРµРјРµРЅРЅС‹С… - С‡Р»РµРЅРѕРІ.
+// Р РµР°Р»РёР·СѓР№С‚Рµ С„СѓРЅРєС†РёРё - С‡Р»РµРЅС‹ РґР»СЏ РІРІРѕРґР° РґР°РЅРЅС‹С… РІ РїРµСЂРµРјРµРЅРЅС‹Рµ - С‡Р»РµРЅС‹, РґР»СЏ РІС‹РїРѕР»РЅРµРЅРёСЏ Р°СЂРёС„РјРµС‚РёС‡РµСЃРєРёС… РѕРїРµСЂР°С†РёР№
+// (СЃР»РѕР¶РµРЅРёРµ, РІС‹С‡РёС‚Р°РЅРёРµ, СѓРјРЅРѕР¶РµРЅРёРµ, РґРµР»РµРЅРёРµ, Рё С‚.Рґ.).РђСЂРёС„РјРµС‚РёС‡РµСЃРєРёРµ РѕРїРµСЂР°С†РёРё РґРѕР»Р¶РЅС‹ РІС‹РїРѕР»РЅСЏС‚СЊСЃСЏ СЃ РґРІСѓРјСЏ РґСЂРѕР±СЏРјРё.
+// РџСЂРёРјРµСЂ Р·Р°РіРѕР»РѕРІРєР° С„СѓРЅРєС†РёРё - С‡Р»РµРЅР° РґР»СЏ СЃР»РѕР¶РµРЅРёСЏ РґСЂРѕР±РµР№ : void Mult(drob x)
 
-
-class Fraction  // класс Дробъ
+class Fraction  // РєР»Р°СЃСЃ Р”СЂРѕР±СЉ
 {
 private:      
 
-    int  Numerator;       // числитель 
-    int  Denominator;     // знаменатель 
+    int  Numerator;       // С‡РёСЃР»РёС‚РµР»СЊ
+    int  Denominator;     // Р·РЅР°РјРµРЅР°С‚РµР»СЊ 
 
 public:
 
-    void enter_Data()  // ввод данных
+    void enter_Data()  // РІРІРѕРґ РґР°РЅРЅС‹С…
     {
-        std::cout << " Введите чиститель : ";
+        std::cout << " Р’РІРµРґРёС‚Рµ С‡РёСЃС‚РёС‚РµР»СЊ : ";
         std::cin >> Numerator;
-        std::cout << " Введите знаменатель : ";
+        std::cout << " Р’РІРµРґРёС‚Рµ Р·РЅР°РјРµРЅР°С‚РµР»СЊ : ";
         std::cin >> Denominator;
 
     }
 
-    void print_Fraction()  // ввывод данных 
+    void print_Fraction()  // РІРІС‹РІРѕРґ РґР°РЅРЅС‹С… 
     {
-        std::cout << "\n Данные числителя  = " << Numerator << std::endl;
-        std::cout << " Данные знаменатель  = " << Denominator << std::endl;
+        std::cout << "\n Р”Р°РЅРЅС‹Рµ С‡РёСЃР»РёС‚РµР»СЏ  = " << Numerator << std::endl;
+        std::cout << " Р”Р°РЅРЅС‹Рµ Р·РЅР°РјРµРЅР°С‚РµР»СЊ  = " << Denominator << std::endl;
     }
 
-    double adding_Fraction()  // сложение
+    double adding_Fraction()  // СЃР»РѕР¶РµРЅРёРµ
     {
         Numerator += (Numerator * Denominator);
 
         return Numerator;
     }
-    double subtracting_Fraction()  // вычитание
+    double subtracting_Fraction()  // РІС‹С‡РёС‚Р°РЅРёРµ
     {
         Numerator -= (Numerator * Denominator);
 
         return Numerator;
     }
-    double multiplication_Fraction()  // умножение
+    double multiplication_Fraction()  // СѓРјРЅРѕР¶РµРЅРёРµ
     {
         Numerator *= Numerator;
 
         return Numerator;
     }
-    double division_Fraction()  // деление
+    double division_Fraction()  // РґРµР»РµРЅРёРµ
     {
         Denominator *= Numerator;
 
@@ -68,7 +67,7 @@ void castom_print()
 int main()
 {
     setlocale(LC_ALL, "ru");
-    Fraction work_Fraction;  // Переменная класса -> work_Fraction
+    Fraction work_Fraction;  // РџРµСЂРµРјРµРЅРЅР°СЏ РєР»Р°СЃСЃР° -> work_Fraction
 
     short batton = NULL;
 
@@ -77,16 +76,16 @@ int main()
     do
     {
         std::cout << "\t___Menu___"
-            << "\n 1. Ввести данные"
-            << "\n 2. Показать данные"
-            << "\n 3. Сложение"
-            << "\n 4. Вычитание"
-            << "\n 5. Умножение"
-            << "\n 6. Деление"
-            << "\n 7. Выход";
+            << "\n 1. Р’РІРµСЃС‚Рё РґР°РЅРЅС‹Рµ"
+            << "\n 2. РџРѕРєР°Р·Р°С‚СЊ РґР°РЅРЅС‹Рµ"
+            << "\n 3. РЎР»РѕР¶РµРЅРёРµ"
+            << "\n 4. Р’С‹С‡РёС‚Р°РЅРёРµ"
+            << "\n 5. РЈРјРЅРѕР¶РµРЅРёРµ"
+            << "\n 6. Р”РµР»РµРЅРёРµ"
+            << "\n 7. Р’С‹С…РѕРґ";
 
         
-        std::cout << "\n\nВведите цифру: ";
+        std::cout << "\n\Р’РІРµРґРёС‚Рµ С†РёС„СЂСѓ: ";
         std::cin >> batton;
 
         switch (batton)
@@ -108,7 +107,7 @@ int main()
         case 3:
             std::cout << std::endl;
             system("cls");
-            std::cout << "Сложение = " << work_Fraction.adding_Fraction()
+            std::cout << "РЎР»РѕР¶РµРЅРёРµ = " << work_Fraction.adding_Fraction()
                 <<"\n";
             std::cout << std::endl;
 
@@ -117,7 +116,7 @@ int main()
         case 4:
             std::cout << std::endl;
             system("cls");
-            std::cout << "Вычитание = " << work_Fraction.subtracting_Fraction()
+            std::cout << "Р’С‹С‡РёС‚Р°РЅРёРµ = " << work_Fraction.subtracting_Fraction()
                 << "\n";
             std::cout << std::endl;
       
@@ -126,7 +125,7 @@ int main()
         case 5:
             std::cout << std::endl;
             system("cls");
-            std::cout << "Умножение = " << work_Fraction.multiplication_Fraction()
+            std::cout << "РЈРјРЅРѕР¶РµРЅРёРµ = " << work_Fraction.multiplication_Fraction()
                 << "\n";
             std::cout << std::endl;
 
@@ -135,7 +134,7 @@ int main()
         case 6:
             std::cout << std::endl;
             system("cls");
-            std::cout << "Деление = " << work_Fraction.division_Fraction()
+            std::cout << "Р”РµР»РµРЅРёРµ = " << work_Fraction.division_Fraction()
                 << "\n";
             std::cout << std::endl;
 
@@ -143,7 +142,7 @@ int main()
 
         case 7:
             std::cout << std::endl;
-            std::cout << "\n Завершене работы ! ";
+            std::cout << "\n Р—Р°РІРµСЂС€РµРЅРµ СЂР°Р±РѕС‚С‹ ! ";
             std::cout << std::endl;
             flag = true;
 
